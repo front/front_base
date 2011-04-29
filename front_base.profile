@@ -64,7 +64,9 @@ function front_base_create_basic_roles_perms() {
   $admin_role->name = 'editor';
   $admin_role->weight = 3;
   user_role_save($admin_role);
-  $permissions = array(
+  
+	//TODO - add permissions for strongarm, better_formats, cck, flag, i18n, views_slideshow
+	$permissions = array(
     'access administration pages',
     'access all views',
     'access all webform results',
@@ -76,7 +78,10 @@ function front_base_create_basic_roles_perms() {
     'access own webform submissions',
     'access site in maintenance mode',
     'access site reports',
-    'access toolbar',
+		'access administration menu',
+		'flush caches',
+		'display drupal links',
+		'use admin toolbar',
     'access user profiles',
     'administer comments',
     'administer menu',
