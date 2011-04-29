@@ -1,0 +1,56 @@
+name = Front Base D7
+description = Front Base Install Drupal 7
+
+version = 7.x-1.x
+core = 7.x
+
+
+; Modules from standard.info
+dependencies[] = block
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = toolbar
+dependencies[] = overlay
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+
+
+; Contrib
+dependencies[] = context
+;;;dependencies[] = context_ui
+dependencies[] = ctools
+dependencies[] = date
+dependencies[] = diff
+dependencies[] = entity
+dependencies[] = entity_metadata
+dependencies[] = features
+dependencies[] = pathauto
+dependencies[] = strongarm
+dependencies[] = token
+dependencies[] = imce
+dependencies[] = views
+;;;dependencies[] = views_ui
+dependencies[] = wysiwyg
+dependencies[] = imce_wysiwyg
+;;;dependencies[] = field_group
+
+
+;Features
+
+
+
+files[] = front_base.profile

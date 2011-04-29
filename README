@@ -1,0 +1,5 @@
+----------------------------------------
+OVERVIEW
+----------------------------------------
+Beginnings of an installer profile for Drupal 7 sites.
+Idea is common setup tasks can be handled during installation to reduce setup time for new projects.
