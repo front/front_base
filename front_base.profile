@@ -21,7 +21,7 @@ function front_base_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_install_tasks_alter().
  */
 function front_base_install_tasks_alter(&$tasks, $install_state) {
-  // Preselect the English language, so users can skip the language selection
+	// Preselect the English language, so users can skip the language selection
   if (!isset($_GET['locale'])) {
     $_POST['locale'] = 'en';
   }
@@ -116,9 +116,12 @@ function front_base_create_basic_roles_perms() {
     'revert revisions',
     'search content',
     'skip comment approval',
+		'post comments',
+		'view comments',
     'use advanced search',
     'use text format filtered_html',
     'use text format full_html',
+		'view published content',
     'view own unpublished content',
     'view revisions',
     'view the administration theme',
@@ -154,7 +157,6 @@ function front_base_enable_admin_theme() {
 function front_base_other_setup_tasks() {
 	// set various system variables
   variable_set('pathauto_node_pattern', '[node:type]/[node:title]');
-  variable_set('pathauto_node_blog_entry_pattern', 'blog/[node:created:custom:Y-m-d]/[node:title]');
   variable_set('pathauto_punctuation_underscore', '1');
 }
 
