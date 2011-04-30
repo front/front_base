@@ -117,7 +117,7 @@ function front_base_create_basic_roles_perms() {
     'search content',
     'skip comment approval',
 		'post comments',
-		'view comments',
+		'access comments',
     'use advanced search',
     'use text format filtered_html',
     'use text format full_html',
