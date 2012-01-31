@@ -52,16 +52,14 @@ dependencies[] = pathauto
 dependencies[] = rules
 dependencies[] = rules_admin
 dependencies[] = strongarm
-dependencies[] = shadowbox
+dependencies[] = colorbox
 dependencies[] = token
 dependencies[] = transliteration
-dependencies[] = imce
 dependencies[] = imageapi
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = webform
 dependencies[] = wysiwyg
-dependencies[] = imce_wysiwyg
 
 
 ;Features
