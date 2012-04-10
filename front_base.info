@@ -52,7 +52,6 @@ dependencies[] = pathauto
 dependencies[] = rules
 dependencies[] = rules_admin
 dependencies[] = strongarm
-dependencies[] = colorbox
 dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = imageapi

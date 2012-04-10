@@ -6,8 +6,8 @@
 function front_base_form_alter(&$form, &$form_state, $form_id) {
 	switch ($form_id) {
 		case 'install_configure_form':
-			$form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME']; 
-			$form['site_information']['site_mail']['#default_value'] = 'admin@'. $_SERVER['HTTP_HOST']; 
+			$form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
+			$form['site_information']['site_mail']['#default_value'] = 'admin@'. $_SERVER['HTTP_HOST'];
 			$form['admin_account']['account']['name']['#default_value'] = 'admin';
 			$form['admin_account']['account']['mail']['#default_value'] = 'front@front.no';
 	    break;
@@ -32,12 +32,12 @@ function front_base_install_tasks_alter(&$tasks, $install_state) {
  */
 function front_base_install_tasks() {
   $task['admin_theme'] = array(
-    'display_name' => st('Set admin theme'),
+    'display_name' => st('Configuring site theme'),
     'display' => TRUE,
     'type' => 'normal',
     'run' => INSTALL_TASK_RUN_IF_REACHED,
     'function' => 'front_base_enable_admin_theme',
-  );  
+  );
 	$task['basic_roles'] = array(
     'display_name' => st('Install extra role(s)'),
     'display' => TRUE,
@@ -51,11 +51,11 @@ function front_base_install_tasks() {
     'type' => 'normal',
     'run' => INSTALL_TASK_RUN_IF_REACHED,
     'function' => 'front_base_other_setup_tasks',
-  );	
+  );
   return $task;
 }
 
-/** 
+/**
  * Create 2 default roles
  */
 function front_base_create_basic_roles_perms() {
@@ -64,7 +64,7 @@ function front_base_create_basic_roles_perms() {
   $admin_role->name = 'editor';
   $admin_role->weight = 3;
   user_role_save($admin_role);
-  
+
 	//TODO - add permissions for strongarm, better_formats, cck, flag, i18n, views_slideshow
 	$permissions = array(
     'access administration pages',
@@ -133,30 +133,24 @@ function front_base_create_basic_roles_perms() {
 }
 
 /**
-* Set Rubik as the Admin Theme
+* Set Fronstrap as default theme and Seven as the Admin Theme
 */
 function front_base_enable_admin_theme() {
   // Enable the admin theme.
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', 'seven')
-    ->execute();
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', 'rubik')
-    ->execute();
-  variable_set('admin_theme', 'rubik');
+	$themes['default'] = 'frontstrap';
+	$themes['default_admin'] = 'seven';
+
+	theme_enable($themes);
+	variable_set('theme_default', $themes['default']);
+  variable_set('admin_theme', $themes['default_admin']);
   variable_set('node_admin_theme', '1');
 }
 
 /**
- * 
+ *
  */
 function front_base_other_setup_tasks() {
 	// set various system variables
   variable_set('pathauto_node_pattern', '[node:type]/[node:title]');
   variable_set('pathauto_punctuation_underscore', '1');
 }
-
