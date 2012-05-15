@@ -7,8 +7,8 @@ function front_base_form_alter(&$form, &$form_state, $form_id) {
 	switch ($form_id) {
 		case 'install_configure_form':
 			$form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
-			$form['site_information']['site_mail']['#default_value'] = 'admin@'. $_SERVER['HTTP_HOST'];
-			$form['admin_account']['account']['name']['#default_value'] = 'admin';
+			$form['site_information']['site_mail']['#default_value'] = 'front@'. $_SERVER['HTTP_HOST'];
+			$form['admin_account']['account']['name']['#default_value'] = 'webadmin';
 			$form['admin_account']['account']['mail']['#default_value'] = 'front@front.no';
 	    break;
 		case 'install_select_profile_form':
