@@ -1,7 +1,7 @@
 name = Front Base D7
-description = Front.no default Drupal 7 development profile
+description = Front d7 profile
 
-version = 7.x-1.x
+version = 7.x-1.5
 core = 7.x
 
 
@@ -9,10 +9,10 @@ core = 7.x
 dependencies[] = block
 dependencies[] = comment
 dependencies[] = contextual
-dependencies[] = dashboard
 dependencies[] = help
 dependencies[] = image
 dependencies[] = list
+dependencies[] = locale
 dependencies[] = menu
 dependencies[] = number
 dependencies[] = options
@@ -20,24 +20,24 @@ dependencies[] = path
 dependencies[] = php
 dependencies[] = taxonomy
 dependencies[] = dblog
-dependencies[] = search
 dependencies[] = shortcut
-dependencies[] = overlay
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
 
 
 ; Contrib
-dependencies[] = admin
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
+dependencies[] = backup_migrate
 dependencies[] = context
 dependencies[] = context_ui
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = date_views
+dependencies[] = devel
 dependencies[] = diff
+dependencies[] = ds
 dependencies[] = email
 dependencies[] = entity
 dependencies[] = entity_token
@@ -45,19 +45,27 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = libraries
 dependencies[] = link
+dependencies[] = media
+dependencies[] = module_filter
+dependencies[] = menu_block
 dependencies[] = references
 dependencies[] = node_reference
 dependencies[] = user_reference
+dependencies[] = panels
 dependencies[] = pathauto
+dependencies[] = pjax
 dependencies[] = rules
 dependencies[] = rules_admin
+dependencies[] = search_api
 dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = imageapi
+dependencies[] = update_custom_settings
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = webform
+dependencies[] = workbench
 dependencies[] = wysiwyg
 
 
