@@ -23,6 +23,7 @@ dependencies[] = shortcut
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
+dependencies[] = filter
 
 
 ; Contrib
