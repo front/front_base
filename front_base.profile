@@ -7,7 +7,7 @@ function front_base_form_alter(&$form, &$form_state, $form_id) {
 	switch ($form_id) {
 		case 'install_configure_form':
 			$form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
-			$form['site_information']['site_mail']['#default_value'] = 'front@'. $_SERVER['HTTP_HOST'];
+			$form['site_information']['site_mail']['#default_value'] = 'front@front.no';
 			$form['admin_account']['account']['name']['#default_value'] = 'webadmin';
 			$form['admin_account']['account']['mail']['#default_value'] = 'front@front.no';
 	    break;
@@ -15,16 +15,6 @@ function front_base_form_alter(&$form, &$form_state, $form_id) {
 		  //can we alter this one ??
 			break;
 	}
-}
-
-/**
- * Implements hook_install_tasks_alter().
- */
-function front_base_install_tasks_alter(&$tasks, $install_state) {
-	// Preselect the English language, so users can skip the language selection
-  if (!isset($_GET['locale'])) {
-    $_POST['locale'] = 'en';
-  }
 }
 
 /**
