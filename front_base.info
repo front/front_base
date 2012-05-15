@@ -50,6 +50,7 @@ dependencies[] = menu_block
 dependencies[] = references
 dependencies[] = node_reference
 dependencies[] = user_reference
+dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = pathauto
 dependencies[] = pjax
