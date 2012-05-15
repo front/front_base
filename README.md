@@ -12,9 +12,6 @@ https://github.com/front/front_base/blob/master/front_base.info
 - Minor pathauto settings
 
 ## TODO
-- Enable modules from make file
-- Select Norwegian language (don't bypass)
 - Create content: 1 webform, 1 basic page ("About us"), 1 custom block called: "Support" (for backend).
 - Better Workbench: Setup custom block with dummy links
 - Export WYSIWYG editor settings for standard input formats when available (see: http://drupal.org/node/624018)
-- Integrate a features server over time.
