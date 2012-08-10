@@ -110,12 +110,12 @@ function front_base_create_basic_roles_perms() {
 }
 
 /**
-* Set Fronstrap as default theme and Seven as the Admin Theme
+* Set Strap as default theme and Ember as the Admin Theme
 */
 function front_base_enable_admin_theme() {
   // Enable the admin theme.
-	$themes['default'] = 'frontstrap';
-	$themes['default_admin'] = 'seven';
+	$themes['default'] = 'strap';
+	$themes['default_admin'] = 'ember';
 
 	theme_enable($themes);
 	variable_set('theme_default', $themes['default']);
